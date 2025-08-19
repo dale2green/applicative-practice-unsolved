@@ -6,9 +6,16 @@ import { data } from "../data/data";
 
 export function getAveragePlanetsTemperature(data) {
   // Your code goes here...
+  let totalAvgTempPlanets = 0;
+  let count = 0;
+  data.planets.filter(function (planet) {
+    if (planet.avgTemp !== undefined) {
+      totalAvgTempPlanets += planet.avgTemp;
+      count++;
+    }
+  });
+  return totalAvgTempPlanets / count;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-13"

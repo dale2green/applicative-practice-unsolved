@@ -6,9 +6,14 @@ import { data } from "../data/data";
 
 export function getPlanetsWithNoMoons(data) {
   // Your code goes here...
+  let noMoon = [];
+  data.planets.filter(function (planet) {
+    if (!Array.isArray(planet.moons) || planet.moons.length === 0) {
+      noMoon.push(planet.name);
+    }
+  });
+  return noMoon;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-15"

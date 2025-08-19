@@ -6,9 +6,18 @@ import { data } from "../data/data";
 
 export function findPlanetNameByMoon(data, moonName) {
   // Your code goes here...
+  let getByMoonName = [];
+  data.planets.filter(function (planet) {
+    if (Array.isArray(planet.moons)) {
+      planet.moons.filter(function (moon) {
+        if (moon === moonName) {
+          getByMoonName.push(planet.name);
+        }
+      });
+    }
+  });
+  return getByMoonName[0];
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-8"

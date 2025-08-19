@@ -6,9 +6,14 @@ import { data } from "../data/data";
 
 export function getOrbitalPeriodsSum(data) {
   // Your code goes here...
+  let totalOrbitalTime = 0;
+  data.asteroids.filter(function (asteroid) {
+    if (asteroid.orbitalPeriod !== undefined) {
+      totalOrbitalTime += asteroid.orbitalPeriod;
+    }
+  });
+  return totalOrbitalTime;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-14"
