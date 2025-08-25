@@ -1,0 +1,7 @@
+https://github.com/dale2green/applicative-practice-unsolved.git
+
+
+
+attempt 2
+all ex shortened.
+didnt realize i could use .map .filter . find ;|

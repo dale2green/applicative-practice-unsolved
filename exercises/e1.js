@@ -6,15 +6,9 @@ import { data } from "../data/data";
 
 export function getPlanetNames(data) {
   // Your code goes here...
-  let planetName = [];
-  data.planets.filter(function (planet) {
-    if (planet.name) {
-      planetName.push(planet.name);
-    }
-  });
-  return planetName;
+  return data.planets.map((planet) => planet.name);
 }
-//getPlanetNames(data);
+
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-1"
 // If the test has all tests passed, switch to the next exercise file

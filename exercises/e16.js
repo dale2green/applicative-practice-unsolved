@@ -10,16 +10,12 @@
 
 export function find(array, callback) {
   // Your code goes here...
-  for (let i = 0; i < array.length; i++) {
-    const current = array[i];
-    const outcome = callback(current, i, array);
-
-    if (outcome) {
-      return current;
+  for (let elem of array) {
+    if (callback(elem)) {
+      return elem;
     }
   }
-
-  return undefined;
+  return;
 }
 
 // === TEST YOURSELF ===
